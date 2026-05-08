@@ -318,6 +318,9 @@
   .right-12 {
     right: calc(var(--spacing) * 12);
   }
+  .-bottom-\[36px\] {
+    bottom: calc(36px * -1);
+  }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }

@@ -233,7 +233,7 @@
                         <div class="relative flex h-72 justify-center overflow-hidden">
                             <img src="/images/01-02.png"
                                  alt="Sipariş yönetimi"
-                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                                 class="phone-hover absolute -bottom-[36px] w-64 drop-shadow-2xl" />
                         </div>
 
                         <div class="relative hidden items-center justify-center lg:flex">
@@ -259,7 +259,7 @@
                         <div class="relative flex h-72 justify-center overflow-hidden">
                             <img src="/images/02-02.png"
                                  alt="Stok ve depo yönetimi"
-                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                                 class="phone-hover absolute -bottom-[36px] w-64 drop-shadow-2xl" />
                         </div>
 
                         <div class="order-1 flex gap-8 lg:order-2">
@@ -350,7 +350,7 @@
                         <div class="relative flex h-72 justify-center overflow-hidden">
                             <img src="/images/03-02.png"
                                  alt="Müşteri yönetimi"
-                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                                 class="phone-hover absolute -bottom-[36px] w-64 drop-shadow-2xl" />
                         </div>
 
                         <div class="relative hidden items-center justify-center lg:flex">
@@ -605,7 +605,7 @@
                 </div>
             </div>
 
-            <!-- CTA Alt -->
+            <!-- Alt Div -->
             <div class="mt-10 border-t border-red-100 pt-8">
                 <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
                     <div class="flex items-center gap-6">
@@ -649,20 +649,18 @@
 
 <script>
     $(function () {
-
         $(".phone-hover").hover(
             function () {
                 $(this).stop().animate({
-                    top: "0px"
+                    bottom: "0px"
                 }, 300);
             },
             function () {
                 $(this).stop().animate({
-                    top: "50px"
+                    bottom: "-36px"
                 }, 300);
             }
         );
-
     });
 
     $(function () {
