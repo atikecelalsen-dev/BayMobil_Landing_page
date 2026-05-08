@@ -1,0 +1,683 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="bg-gray-100 px-10 py-10 text-center">
+
+    @*
+        Saha satış yönetim sistemi div
+    *@
+    <section class="relative min-h-screen overflow-hidden py-3">
+        <div class="mx-auto grid w-full grid-cols-1 items-center justify-between gap-10 px-10 pt-10 lg:grid-cols-[2fr_3fr]">
+
+            <!-- Sol Alan -->
+            <div class="relative z-10 text-left">
+                <div class="kirmizi-baslik">
+                    Saha satış yönetim sistemi
+                </div>
+
+                <h1 class="h1-yazi max-w-xl">
+                    Sahada satışınızı yönetin,
+                    <span class="block text-red-600">işinizi hızlandırın.</span>
+                </h1>
+
+                <p class="mt-6 max-w-xl text-lg leading-8 text-slate-600">
+                    BayMobil ile siparişten sevkiyata, stoktan raporlamaya kadar
+                    tüm operasyonlarınızı sahada hızlı ve hatasız yönetin.
+                </p>
+
+                <div class="mt-10 flex flex-wrap items-center gap-5">
+                    <a href="#"
+                       class="rounded-btn-red inline-flex gap-3">
+                        Hemen İndir
+                        <span class="text-xl">↗</span>
+                    </a>
+
+                    <a href="#"
+                       class="rounded-btn-white">
+                        <span class="flex h-6 w-6 items-center justify-center rounded-full border border-slate-600 text-xs">
+                            <icon name="play" class="h-4 w-4 text-black"></icon>
+                        </span>
+                        Demo İncele
+                    </a>
+                </div>
+
+                <div class="mt-12 grid max-w-xl grid-cols-1 gap-6 lg:grid-cols-3">
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-red-600 text-red-600">
+                            ✓
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Hızlı</h3>
+                            <p class="text-sm text-slate-500">Kolay Kullanım</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-red-600 text-red-600">
+                            ✓
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Güvenilir</h3>
+                            <p class="text-sm text-slate-500">Hatasız İşlem</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-3">
+                        <div class="mt-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-red-600 text-red-600">
+                            ✓
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-800">Anlık</h3>
+                            <p class="text-sm text-slate-500">Doğru Veriye Erişim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sağ Telefon Görselleri -->
+            <div class="relative flex items-center justify-center">
+
+                <!-- Arka blur -->
+                <div class="absolute right-6 top-8 h-72 w-72 rounded-full bg-red-200/60 blur-3xl"></div>
+
+                <!-- Nokta desen -->
+                <div class="absolute right-0 top-0 gap-1">
+                    <div class="grid grid-cols-4 gap-2">
+                        @for (int i = 0; i < 24; i++)
+                        {
+                            <span class="h-1.5 w-1.5 rounded-full bg-red-200"></span>
+                        }
+                    </div>
+                </div>
+
+                @* <img src="/images/phones.png"
+                     alt="BayMobil uygulama ekranları"
+                     class="relative drop-shadow-2xl" /> *@
+
+                <div class="relative mx-auto mt-10 h-[360px] w-full max-w-[360px] overflow-visible lg:mt-20 lg:h-[560px] lg:max-w-[560px]">
+
+                    <img src="/images/phone-left.png"
+                         class="phone phone-left" />
+
+                    <img src="/images/phone-center.png"
+                         class="phone phone-center" />
+
+                    <img src="/images/phone-right.png"
+                         class="phone phone-right" />
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Kısaca Özellikler  -->
+    <section class="mt-10 px-6 py-3">
+        <div class="mx-auto w-full rounded-2xl bg-white px-6 py-4 shadow-md shadow-slate-900/5">
+            <div class="grid grid-cols-1 divide-y divide-slate-200 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+
+                <!-- 1 -->
+                <div class="flex items-center gap-4 px-3 py-2 lg:px-6 lg:first:pl-0">
+                    <div class="icon-bg-12">
+                        <icon name="cart" class="h-6 w-6 text-red-600"></icon>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-base font-bold text-slate-900">Sipariş Yönetimi</h3>
+                        <p class="mt-1 text-sm leading-5 text-slate-500">
+                            Siparişlerinizi sahada kolayca 
+                            oluşturun ve yönetin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="flex items-center gap-4 px-3 py-2 lg:px-6">
+                    <div class="icon-bg-12">
+                        <icon name="package" class="h-6 w-6 text-red-600"></icon>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-base font-bold text-slate-900">Stok & Depo</h3>
+                        <p class="mt-1 text-sm leading-5 text-slate-500">
+                            Ürün giriş-çıkış, stok ve sayım 
+                            işlemlerinizi kontrol edin.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="flex items-center gap-4 px-3 py-2 lg:px-6">
+                    <div class="icon-bg-12">
+                        <icon name="users" class="h-6 w-6 text-red-600"></icon>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-base font-bold text-slate-900">Müşteri Yönetimi</h3>
+                        <p class="mt-1 text-sm leading-5 text-slate-500">
+                            Müşteri bilgilerinizi takip edin 
+                            kârlılığınızı artırın.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="flex items-center gap-4 px-3 py-2 lg:px-6 lg:last:pr-0">
+                    <div class="icon-bg-12">
+                        <icon name="chart-line" class="h-6 w-6 text-red-600"></icon>
+                    </div>
+                    <div class="text-left">
+                        <h3 class="text-base font-bold text-slate-900">Raporlama</h3>
+                        <p class="mt-1 text-sm leading-5 text-slate-500">
+                            Anlık satış, kârlılık ve performans 
+                            raporlarına ulaşın.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Özellikler -->
+    <section  class="px-6 py-20">
+        <div class="mx-auto w-full">
+
+            <!-- Başlık -->
+            <div class="mb-10 text-center">
+                <p class="mb-3 text-base font-bold uppercase tracking-wider text-red-600">
+                    Özellikler
+                </p>
+
+                <h2 class="text-3xl font-semibold tracking-tight text-slate-900 lg:text-4xl">
+                    İşinizi kolaylaştıran
+                    <span class="text-red-600">güçlü özellikler</span>
+                </h2>
+            </div>
+
+            <div class="space-y-5">
+                <!-- Özellik 1 -->
+                <div class="relative overflow-hidden rounded-3xl bg-white px-8 py-10 shadow-lg shadow-slate-900/5">
+                    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_1fr_0.7fr]">
+
+                        <div class="flex gap-8">
+                            <div class="font-black flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-lg text-red-600">
+                                01
+                            </div>
+
+                            <div class="text-left">
+                                <h3 class="text-2xl font-bold text-slate-900">
+                                    Sipariş Yönetimi
+                                </h3>
+
+                                <p class="mt-4 max-w-md text-base leading-6 text-slate-600">
+                                    Müşterilerinizden gelen siparişleri kolayca oluşturun,
+                                    düzenleyin ve takip edin. Sipariş durumlarını anlık
+                                    olarak görüntüleyin.
+                                </p>
+
+                                <ul class="mt-6 space-y-3 text-base text-slate-600">
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Hızlı sipariş kaydı
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Sipariş durumu takibi
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Geçmiş siparişlere kolay erişim
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative flex h-72 justify-center overflow-hidden">
+                            <img src="/images/01-02.png"
+                                 alt="Sipariş yönetimi"
+                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                        </div>
+
+                        <div class="relative hidden items-center justify-center lg:flex">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-3xl bg-white text-red-600 shadow-xl shadow-red-500/20">
+                                <icon name="cart" class="h-12 w-12"></icon>
+                            </div>
+
+                            <div class="ml-8 grid grid-cols-4 gap-2">
+                                @for (int i = 0; i < 24; i++)
+                                {
+                                    <span class="h-1.5 w-1.5 rounded-full bg-red-200"></span>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Özellik 2 -->
+                <div class="relative overflow-hidden rounded-3xl bg-red-50 px-8 py-10 shadow-lg shadow-slate-900/5">
+                    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[0.9fr_1.2fr_0.7fr]">
+
+                        <div class="relative flex h-72 justify-center overflow-hidden">
+                            <img src="/images/02-02.png"
+                                 alt="Stok ve depo yönetimi"
+                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                        </div>
+
+                        <div class="order-1 flex gap-8 lg:order-2">
+                            <div class="font-black flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-lg text-red-600">
+                                02
+                            </div>
+
+                            <div class="text-left">
+                                <h3 class="text-2xl font-bold text-slate-900">
+                                    Stok & Depo Yönetimi
+                                </h3>
+
+                                <p class="mt-4 max-w-md text-base leading-6 text-slate-600">
+                                    Ürün giriş-çıkışlarını, depo transferlerini ve sayım
+                                    işlemlerini sahada hızlı ve hatasız gerçekleştirin.
+                                </p>
+
+                                <ul class="mt-6 space-y-3 text-base text-slate-600">
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Ürün giriş ve çıkış işlemleri
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Depo transferi
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Anlık stok takibi ve sayım
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative order-3 hidden items-center justify-center lg:flex">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-3xl bg-white text-red-600 shadow-xl shadow-red-500/20">
+                                <icon name="package" class="h-12 w-12"></icon>
+                            </div>
+
+                            <div class="ml-8 grid grid-cols-4 gap-2">
+                                @for (int i = 0; i < 24; i++)
+                                {
+                                    <span class="h-1.5 w-1.5 rounded-full bg-red-200"></span>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Özellik 3 -->
+                <div class="relative overflow-hidden rounded-3xl bg-white px-8 py-10 shadow-lg shadow-slate-900/5">
+                    <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.1fr_1fr_0.7fr]">
+
+                        <div class="flex gap-8">
+                            <div class="font-black flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-red-100 text-lg text-red-600">
+                                03
+                            </div>
+
+                            <div class="text-left">
+                                <h3 class="text-2xl font-bold text-slate-900">
+                                    Müşteri Yönetimi
+                                </h3>
+
+                                <p class="mt-4 max-w-md text-base leading-6 text-slate-600">
+                                    Müşteri bilgilerinizi düzenli olarak takip edin,
+                                    borç-alacak durumları ve kârlılık analizleri ile
+                                    işinizi büyütün.
+                                </p>
+
+                                <ul class="mt-6 space-y-3 text-base text-slate-600">
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Müşteri kartları ve iletişim bilgileri
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Borç-alacak takibi
+                                    </li>
+                                    <li class="items-left flex gap-3">
+                                        <span class="flex h-5 w-5 items-center justify-center rounded-full border-2 border-red-600 text-xs font-bold text-red-600">✓</span>
+                                        Müşteri kârlılık analizi
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="relative flex h-72 justify-center overflow-hidden">
+                            <img src="/images/03-02.png"
+                                 alt="Müşteri yönetimi"
+                                 class="phone-hover absolute top-[50px] w-64 drop-shadow-2xl" />
+                        </div>
+
+                        <div class="relative hidden items-center justify-center lg:flex">
+                            <div class="flex h-24 w-24 items-center justify-center rounded-3xl bg-white text-red-600 shadow-xl shadow-red-500/20">
+                                <icon name="users" class="h-12 w-12"></icon>
+                            </div>
+
+                            <div class="ml-8 grid grid-cols-4 gap-2">
+                                @for (int i = 0; i < 24; i++)
+                                {
+                                    <span class="h-1.5 w-1.5 rounded-full bg-red-200"></span>
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Sipariş anlatımı -->
+    <section class="px-6 py-16">
+        <div class="mx-auto w-full overflow-hidden rounded-3xl bg-red-50 px-8 py-10 shadow-lg shadow-slate-900/5">
+
+            <div class="grid grid-cols-1 items-center justify-between gap-10 lg:grid-cols-[5fr_11fr]">
+                <div class="grid-cols-[4fr_1fr] grid gap-10">
+                    <!-- Sol Telefon -->
+                    <div class="flex flex-row items-start">
+                        <img src="/images/phone04.png"
+                             alt="Sipariş ekranı"
+                             class="drop-shadow-2xl" />
+                    </div>
+
+                     <div class="left-4 mt-5 flex flex-col justify-between">
+                        <div class="grid grid-cols-4 gap-2">
+                            <!-- Nokta desen -->
+                            <div class="right-0 top-8 grid grid-cols-4 gap-2">
+                                    @for (int i = 0; i < 24; i++)
+                                    {
+                                        <span class="h-1 w-1 rounded-full bg-red-200"></span>
+                                    }
+                                </div>
+                        </div>
+                        <div>
+                            <img src="/images/ok-red.png"
+                                    class="mt-36 h-80 w-32" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-10 lg:grid-cols-[6fr_5fr]">
+
+                <!-- Orta Yazı -->
+                    <div class="flex flex-col items-center justify-center">
+                    <p class="font-black mb-4 text-base uppercase tracking-wider text-red-600">
+                        Sipariş
+                    </p>
+
+                    <h2 class="text-left text-3xl font-semibold leading-tight tracking-tight text-slate-900 lg:text-4xl">
+                        Siparişlerinizi sahada
+                        <span class="text-red-600">hızlı ve hatasız</span>
+                        yönetin
+                    </h2>
+
+                    <p class="mt-5 max-w-xl text-left text-base leading-7 text-slate-600">
+                        Müşterilerinizden gelen siparişleri anında oluşturun,
+                        düzenleyin ve sahada kolayca yönetin.
+                    </p>
+
+                    <div class="mt-8 space-y-7 text-left">
+
+                        <div class="flex gap-5">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-red-600 shadow-lg shadow-red-500/20">
+                                <icon name="bolt" class="h-6 w-6"></icon>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Hızlı sipariş oluşturma</h3>
+                                <p class="mt-1 text-sm leading-6 text-slate-600">
+                                    Ürünlerinizi kolayca seçin, miktar girin ve siparişlerinizi saniyeler içinde oluşturun.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-red-600 shadow-lg shadow-red-500/20">
+                                <icon name="shield" class="h-6 w-6"></icon>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Sipariş durumu takibi</h3>
+                                <p class="mt-1 text-sm leading-6 text-slate-600">
+                                    Tüm siparişlerinizi anlık olarak takip edin, durumlarını kolayca kontrol edin.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-5">
+                            <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-white text-red-600 shadow-lg shadow-red-500/20">
+                                <icon name="clock" class="h-6 w-6"></icon>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-slate-900">Geçmiş siparişlere erişim</h3>
+                                <p class="mt-1 text-sm leading-6 text-slate-600">
+                                    Geçmiş siparişlerinizi hızlıca ulaşın, tekrar sipariş oluşturmayı kolaylaştırın.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                
+                <!-- Sağ Kartlar -->
+                    <div class="flex flex-col space-y-6">
+
+                    <div class="rounded-2xl bg-white p-6 shadow-xl shadow-slate-900/10">
+                        <h3 class="font-black mb-5 text-slate-900">Sipariş Özeti</h3>
+
+                        <div class="space-y-4 text-sm text-slate-600">
+                            <div class="flex justify-between">
+                                <span>Ara Toplam</span>
+                                <span class="font-bold text-slate-700">630,00₺</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>İskonto %5</span>
+                                <span class="font-bold text-slate-700">31,50₺</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>KDV %10</span>
+                                <span class="font-bold text-slate-700">59,85₺</span>
+                            </div>
+
+                            <div class="border-t border-slate-200 pt-4">
+                                <div class="font-black flex justify-between text-slate-900">
+                                    <span>Genel Toplam</span>
+                                    <span>658,35₺</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl bg-white p-6 text-left shadow-xl shadow-slate-900/10">
+                        <h3 class="font-black mb-5 text-slate-900">Sipariş Durumu</h3>
+
+                        <div class="relative space-y-5 pl-8 text-sm">
+                            <div class="h-[calc(100%-20px)] absolute left-2 top-2 border-l border-dashed border-slate-300"></div>
+
+                            <div class="relative">
+                                <span class="absolute -left-[30px] top-1 h-3 w-3 rounded-full border-2 border-green-500 bg-white"></span>
+                                <p class="font-bold text-slate-900">Oluşturuldu</p>
+                                <p class="text-slate-500">10.08.2025-09:41</p>
+                            </div>
+
+                            <div class="relative">
+                                <span class="absolute -left-[30px] top-1 h-3 w-3 rounded-full border-2 border-green-500 bg-white"></span>
+                                <p class="font-bold text-slate-900">Onaylandı</p>
+                                <p class="text-slate-500">10.08.2025-09:45</p>
+                            </div>
+
+                            <div class="relative">
+                                <span class="absolute -left-[30px] top-1 h-3 w-3 rounded-full border-2 border-red-500 bg-white"></span>
+                                <p class="font-bold text-slate-900">Sevk Edildi</p>
+                                <p class="text-slate-500">10.08.2025-11:00</p>
+                            </div>
+
+                            <div class="relative">
+                                <span class="absolute -left-[30px] top-1 h-3 w-3 rounded-full border-2 border-slate-300 bg-white"></span>
+                                <p class="font-bold text-slate-900">Teslim Edildi</p>
+                                <p class="text-slate-500">Beklemede</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                </div>
+
+            </div>
+            <div class="grid-cols-[1.5fr_2fr_3.5fr_0.5fr] mt-10 grid lg:mt-0">
+                <div>  </div>
+                <div class="flex h-auto w-full max-w-[320px] rounded-2xl bg-white px-6 py-4 shadow-lg">
+                    <div class="flex items-center gap-4">
+                        <div class="icon-bg-12">
+                            <icon name="refresh" class="h-6 w-6 text-red-600"></icon>
+                        </div>
+                        <div class="text-left">
+                            <h4 class="font-bold text-slate-900">Tekrarlayan siparişler</h4>
+                            <p class="mt-1 max-w-xs text-xs leading-5 text-slate-600">
+                                Geçmiş siparişlerinizi hızlıca ulaşın,
+                                tekrar sipariş oluşturmayı kolaylaştırın.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div></div>
+                <div class="grid grid-cols-4 gap-2">
+                    <!-- Nokta desen -->
+                    <div class="right-0 top-8 grid grid-cols-4 gap-2">
+                        @for (int i = 0; i < 24; i++)
+                        {
+                            <span class="h-1 w-1 rounded-full bg-red-200"></span>
+                        }
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- İstatistik Bar -->
+            <div class="mt-12 rounded-2xl bg-white px-8 py-5 shadow-xl shadow-slate-900/5">
+                <div class="grid grid-cols-1 items-center divide-y divide-slate-200 lg:grid-cols-4 lg:divide-x lg:divide-y-0">
+
+                    <div class="flex items-center justify-center gap-4 py-3 lg:px-6">
+                        <div class="icon-bg-10">
+                            <icon name="check" class="h-6 w-6 text-red-600"></icon>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">% 99</h4>
+                            <p class="text-sm text-slate-500">Doğru sipariş</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center gap-4 py-3 lg:px-6">
+                        <div class="icon-bg-10">
+                            <icon name="bolt" class="h-6 w-6 text-red-600"></icon>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">2x</h4>
+                            <p class="text-sm text-slate-500">Daha hızlı işlem</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center gap-4 py-3 lg:px-6">
+                        <div class="icon-bg-10">
+                            <icon name="bolt" class="h-6 w-6 text-red-600"></icon>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">7/24</h4>
+                            <p class="text-sm text-slate-500">Sahada Erişim</p>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center justify-center gap-4 py-3 lg:px-6">
+                        <div class="icon-bg-10">
+                            <icon name="refresh" class="h-6 w-6 text-red-600"></icon>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-slate-900">Anlık</h4>
+                            <p class="text-sm text-slate-500">Sekronizasyon</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- CTA Alt -->
+            <div class="mt-10 border-t border-red-100 pt-8">
+                <div class="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-center">
+                    <div class="flex items-center gap-6">
+                        <div class="icon-bg-16 !h-20 !w-20">
+                            <icon name="gear" class="h-10 w-10 text-red-600"></icon>
+                        </div>
+
+                        <div class="ml-5 text-left">
+                            <h3 class="text-2xl font-bold text-slate-900">
+                                Tüm özellikleri keşfetmeye hazır mısınız?
+                            </h3>
+                            <p class="mt-2 text-slate-600">
+                                BayMobil ile iş süreçlerini kolaylaştırın, zamandan tasarruf edin.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 flex flex-wrap items-center gap-5">
+                        <a href="#"
+                           class="rounded-btn-red inline-flex gap-3">
+                            Hemen İndir
+                            <span class="text-xl">↗</span>
+                        </a>
+
+                        <a href="#"
+                           class="rounded-btn-white">
+                            <span class="flex h-6 w-6 items-center justify-center rounded-full border border-slate-600 text-xs">
+                                <icon name="play" class="h-4 w-4 text-black"></icon>
+                            </span>
+                            Demo İncele
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</div>
+
+
+<script>
+    $(function () {
+
+        $(".phone-hover").hover(
+            function () {
+                $(this).stop().animate({
+                    top: "0px"
+                }, 300);
+            },
+            function () {
+                $(this).stop().animate({
+                    top: "50px"
+                }, 300);
+            }
+        );
+
+    });
+
+    $(function () {
+        setInterval(function () {
+            $(".phone").each(function () {
+                if ($(this).hasClass("phone-center")) {
+                    $(this).removeClass("phone-center").addClass("phone-left");
+                }
+                else if ($(this).hasClass("phone-right")) {
+                    $(this).removeClass("phone-right").addClass("phone-center");
+                }
+                else if ($(this).hasClass("phone-left")) {
+                    $(this).removeClass("phone-left").addClass("phone-right");
+                }
+            });
+        }, 3000);
+    });
+</script>

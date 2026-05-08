@@ -1,0 +1,267 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="bg-gray-100 px-10 py-10 text-center">
+
+    <section class="relative overflow-hidden px-6 py-20">
+        <div class="mx-auto grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[1.2fr_1fr]">
+
+            <!-- Sol Bilgi -->
+            <div class="text-left">
+                <div class="kirmizi-baslik">
+                    İLETİŞİM
+                </div>
+
+                <h1 class="h1-yazi max-w-3xl">
+                    Bizimle iletişime geçin
+                    <span class="block text-red-600">yanınızdayız</span>
+                </h1>
+
+                <p class="mt-6 max-w-2xl text-lg leading-8 text-slate-700">
+                    BayMobil ile ilgili sorularınız, destek talepleriniz veya iş birliği fırsatları
+                    için bize ulaşabilirsiniz. Size en kısa sürede geri dönüş yapacağız.
+                </p>
+            </div>
+
+            <!-- Sağ Görsel -->
+            <div class="relative flex justify-center lg:justify-end">
+                <div class="absolute right-12 top-8 h-72 w-72 rounded-full bg-red-200/50 blur-3xl"></div>
+
+                <img src="/images/iletisim-page-phone.png"
+                     alt="BayMobil iletişim"
+                     class="relative z-10 w-full max-w-md drop-shadow-2xl" />
+            </div>
+        </div>
+    </section>
+
+    <section class="px-6 py-12">
+        <div class="mx-auto grid w-full grid-cols-1 gap-12 lg:grid-cols-[1.4fr_0.7fr]">
+
+            <div>
+                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+
+                    <!-- Telefon -->
+                    <div class="rounded-2xl bg-white p-6 text-center shadow-lg shadow-slate-900/10">
+                        <div class="icon-bg-16">
+                            <icon name="phone" class="h-8 w-8"></icon>
+                        </div>
+                        <h3 class="mt-5 font-bold text-slate-900">Telefon</h3>
+                        <p class="mt-3 text-sm text-slate-600">0530 111 11 11</p>
+                        <p class="mt-2 text-sm text-slate-500">Pzt- Cum 09:00-18:00</p>
+                    </div>
+
+                    <!-- E-posta -->
+                    <div class="rounded-2xl bg-white p-6 text-center shadow-lg shadow-slate-900/10">
+                        <div class="icon-bg-16">
+                            <icon name="mail" class="h-8 w-8"></icon>
+                        </div>
+                        <h3 class="mt-5 font-bold text-slate-900">E-posta</h3>
+                        <p class="mt-3 text-sm text-slate-600">info@baymobil.com</p>
+                        <p class="mt-2 text-sm text-slate-500">7/24 bize yazabilirsiniz</p>
+                    </div>
+
+                    <!-- Adres -->
+                    <div class="rounded-2xl bg-white p-6 text-center shadow-lg shadow-slate-900/10">
+                        <div class="icon-bg-16">
+                            <icon name="location" class="h-8 w-8"></icon>
+                        </div>
+                        <h3 class="mt-5 font-bold text-slate-900">Adres</h3>
+                        <p class="mt-3 text-sm text-slate-600">Ankara</p>
+                        <p class="mt-2 text-sm text-slate-500">Yenimahalle</p>
+                    </div>
+
+                    <!-- Canlı Destek -->
+                    <div class="rounded-2xl bg-white p-6 text-center shadow-lg shadow-slate-900/10">
+                        <div class="icon-bg-16">
+                            <icon name="phone" class="h-8 w-8"></icon>
+                        </div>
+                        <h3 class="mt-5 font-bold text-slate-900">Canlı Destek</h3>
+                        <p class="mt-3 text-sm text-slate-600">Uygulama içerisinden</p>
+                        <p class="mt-2 text-sm text-slate-500">7/24 destek alabilirsiniz</p>
+                    </div>
+
+                </div>
+
+                <!-- Harita -->
+                <div class="mt-8 overflow-hidden rounded-2xl shadow-lg shadow-slate-900/5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.990788415908!2d28.828227599999998!3d41.069193999999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa53dc96026e3%3A0xb463c133db9a79a5!2sBaykom%20Bilgisayar%20Yaz%C4%B1l%C4%B1m%20Hizmetleri!5e0!3m2!1sen!2str!4v1778193257470!5m2!1sen!2str" 
+                        class="h-[250px] w-full border-0"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Mesaj Gönderin Formu -->
+            <div class="rounded-2xl bg-white p-8 shadow-xl shadow-slate-900/10">
+                <h2 class="text-2xl font-bold text-slate-900">Bize Mesaj Gönderin</h2>
+                <p class="mt-2 text-sm leading-6 text-slate-600">
+                    Formu doldurun, en kısa sürede size dönüş yapalım.
+                </p>
+
+                <form class="mt-7 space-y-6">
+                    <div class="grid grid-cols-1 gap-5 sm:grid-cols-2">
+                        <div>
+                            <label class="mb-2 block text-sm font-bold text-slate-800">Ad Soyad</label>
+                            <input type="text"
+                                   placeholder="Adınızı Soyadınız"
+                                   class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100" />
+                        </div>
+
+                        <div>
+                            <label class="mb-2 block text-sm font-bold text-slate-800">E-posta</label>
+                            <input type="email"
+                                   placeholder="E-posta adresiniz"
+                                   class="w-full rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="mb-2 block text-sm font-bold text-slate-800">Mesajınız</label>
+                        <textarea rows="7"
+                                  placeholder="Mesajınızı buraya yazınız"
+                                  class="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100"></textarea>
+                    </div>
+
+                    <button type="submit"
+                            class="rounded-btn-red flex w-full !justify-between !pl-36">
+                        <p>Mesajı Gönder</p>
+                        <icon name="message" class="h-5 w-5 text-white"></icon>
+                    </button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="px-6 py-16">
+        <div class="mx-auto grid w-full gap-12 rounded-3xl bg-red-50 px-10 py-12 shadow-lg shadow-slate-900/5 lg:grid-cols-[0.8fr_1.2fr]">
+
+            <!-- Sol Alan -->
+            <div class="flex flex-col justify-center text-left">
+                <div class="mb-6 inline-flex w-fit rounded-lg bg-red-100 px-4 py-2 text-sm font-bold uppercase tracking-wide text-red-600">
+                    Sık Sorulan Sorular
+                </div>
+
+                <h2 class="text-4xl font-semibold leading-tight tracking-tight text-slate-900">
+                    Merak ettikleriniz
+                    <span class="block text-red-600">burada olabilir.</span>
+                </h2>
+
+                <p class="mt-8 max-w-md text-lg leading-8 text-slate-600">
+                    Aklınıza takılan diğer sorular için bize dilediğiniz zaman ulaşabilirsiniz.
+                </p>
+            </div>
+
+            <!-- Sağ Dropdown Bilgiler -->
+            <div class="space-y-5">
+
+                <!-- Bilgi 1 -->
+                <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+                    <button class="faq-btn flex w-full items-center justify-between px-7 py-6 text-left">
+                        <span class="text-xl font-semibold text-slate-900">
+                            BayMobil’i nasıl kullanmaya başlayabilirim ?
+                        </span>
+
+                        <span class="faq-icon text-2xl font-medium text-slate-900 transition">
+                            ⌵
+                        </span>
+                    </button>
+
+                    <div class="faq-content hidden border-t border-slate-100 px-7 py-6">
+                        <p class="text-base leading-7 text-slate-600">
+                            BayMobil’i kullanmaya başlamak için demo talebi oluşturabilir
+                            veya bizimle iletişime geçebilirsiniz. Kurulum ve eğitim süreçlerinde ekibimiz size destek sağlar.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bilgi 2 -->
+                <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+                    <button class="faq-btn flex w-full items-center justify-between px-7 py-6 text-left">
+                        <span class="text-xl font-semibold text-slate-900">
+                            Verilerim güvende mi ?
+                        </span>
+
+                        <span class="faq-icon text-2xl font-medium text-slate-900 transition">
+                            ⌵
+                        </span>
+                    </button>
+
+                    <div class="faq-content hidden border-t border-slate-100 px-7 py-6">
+                        <p class="text-base leading-7 text-slate-600">
+                            Tüm verileriniz güvenli altyapılarda saklanır. Düzenli yedekleme,
+                            erişim kontrolü ve güvenlik politikaları ile bilgileriniz korunur.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bilgi 3 -->
+                <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+                    <button class="faq-btn flex w-full items-center justify-between px-7 py-6 text-left">
+                        <span class="text-xl font-semibold text-slate-900">
+                            Hangi platformlarda kullanabilirim ?
+                        </span>
+
+                        <span class="faq-icon text-2xl font-medium text-slate-900 transition">
+                            ⌵
+                        </span>
+                    </button>
+
+                    <div class="faq-content hidden border-t border-slate-100 px-7 py-6">
+                        <p class="text-base leading-7 text-slate-600">
+                            BayMobil’i Android, iOS ve web platformlarında kullanabilirsiniz.
+                            Tüm cihazlar arasında senkronize şekilde çalışır.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bilgi 4 -->
+                <div class="overflow-hidden rounded-2xl bg-white shadow-sm">
+                    <button class="faq-btn flex w-full items-center justify-between px-7 py-6 text-left">
+                        <span class="text-xl font-semibold text-slate-900">
+                            Destek ekibiniz hangi saatlerde hizmet veriyor ?
+                        </span>
+
+                        <span class="faq-icon text-2xl font-medium text-slate-900 transition">
+                            ⌵
+                        </span>
+                    </button>
+
+                    <div class="faq-content hidden border-t border-slate-100 px-7 py-6">
+                        <p class="text-base leading-7 text-slate-600">
+                            Destek ekibimiz hafta içi 09:00 - 18:00 saatleri arasında aktif hizmet vermektedir.
+                            Acil durumlar için uygulama içinden 7/24 destek talebi oluşturabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+
+
+<script>
+    const faqButtons = document.querySelectorAll(".faq-btn");
+
+    faqButtons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            const content = button.nextElementSibling;
+            const icon = button.querySelector(".faq-icon");
+
+            content.classList.toggle("hidden");
+
+            if (content.classList.contains("hidden")) {
+                icon.textContent = "⌵";
+            }
+            else {
+                icon.textContent = "−";
+            }
+        });
+    });
+</script>
