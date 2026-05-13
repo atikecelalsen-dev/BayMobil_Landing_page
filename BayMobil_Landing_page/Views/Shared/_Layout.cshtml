@@ -12,7 +12,7 @@
     <script src="/js/icon.js"></script>
 
 </head>
-<body>
+<body class="scroll-smooth">
     <header class="sticky top-0 z-50 border-b border-gray-200 bg-gray-50 backdrop-blur">
         <div class="mx-auto flex h-20 items-center justify-between px-6 lg:px-8">
 
@@ -29,10 +29,8 @@
                 lg:static lg:flex lg:w-auto lg:flex-row lg:gap-14 lg:justify-self-center lg:border-0 lg:bg-gray-50 lg:px-0 lg:py-0">
 
                 <a asp-controller="Home" asp-action="Index" class="navbar-item">  Ana Sayfa  </a>
-
-                <a asp-controller="Home" asp-action="Ozellikler" class="navbar-item"> Özellikler </a>
-
-                <a asp-controller="Home" asp-action="Siparis" class="navbar-item"> Sipariş </a>
+                <a asp-controller="Home" asp-action="Index" asp-fragment="ozellikler-section" class="navbar-item"> Özellikler </a>
+                 <a asp-controller="Home" asp-action="Index" asp-fragment="siparis-section" class="navbar-item"> Sipariş </a>
 
                 <a asp-controller="Home" asp-action="Iletisim" class="navbar-item"> İletişim </a>
                 <!-- Mobile Download Button -->
@@ -105,8 +103,8 @@
                     <div class="mt-6 space-y-4 text-sm text-black">
                      
                         <div> <a asp-controller="Home" asp-action="Index" class="navbar-item"> Ana Sayfa </a></div>
-                        <div> <a asp-controller="Home" asp-action="Ozellikler" class="navbar-item"> Özellikler </a></div>
-                        <div> <a asp-controller="Home" asp-action="Siparis" class="navbar-item"> Sipariş </a></div>
+                        <div> <a asp-controller="Home" asp-action="Index" asp-fragment="ozellikler-section" class="navbar-item"> Özellikler </a></div>
+                        <div> <a asp-controller="Home" asp-action="Index" asp-fragment="siparis-section" class="navbar-item"> Sipariş </a></div>
                         <div> <a asp-controller="Home" asp-action="Iletisim" class="navbar-item"> İletişim </a></div>
                     </div>
                 </div>
@@ -116,10 +114,10 @@
                     <h3 class="font-black text-3xl tracking-tight text-black">Destek</h3>
 
                     <div class="mt-6 space-y-4 text-left text-sm text-gray-600">
-                        <div><p  class="navbar-item">Yardım Merkezi</p></div>
-                        <div><p class="navbar-item">Kullanım Kılavuzu</p></div>
-                        <div><p class="navbar-item">SSS</p></div>
-                        <div><p  class="navbar-item">Gizlilik Politikası</p></div>
+                        <div> <a asp-controller="Home" asp-action="Iletisim" asp-fragment="yardim-merkezi-section" class="navbar-item"> Yardım Merkezi </a></div>
+                        <div> <a asp-controller="Home" asp-action="Index" asp-fragment="kullanim-kilavuzu-section" class="navbar-item"> Kullanım Kılavuzu </a></div>
+                        <div> <a asp-controller="Home" asp-action="Iletisim" asp-fragment="sss-section" class="navbar-item"> SSS </a></div>
+                        <div> <a asp-controller="Home" asp-action="Gizlilik" class="navbar-item"> Gizlilik Politikası </a></div>
                     </div>
                 </div>
 
@@ -128,19 +126,29 @@
                     <h3 class="font-black text-3xl tracking-tight text-black">İletişim</h3>
 
                     <div class="mt-6 space-y-5 text-sm text-black">
-                        <div class="flex items-center gap-3">
+                        <div onclick="copyPhone()" class="flex items-center gap-3">
                             <icon name="phone" class="h-6 w-6 text-gray-600"></icon>
-                            <span>0530111111</span>
+                            <span id="phone">0212 659 00 86</span>
+                            <span id="phone-copy-message"
+                                  class="hidden bg-white text-sm text-green-600">
+                                <icon name="copy" class="h-6 w-6 text-green-600"></icon>
+                                Kopyalandı
+                            </span>
                         </div>
 
-                        <div class="flex items-center gap-3">
+                        <div onclick="copyMail()" class="flex items-center gap-3">
                             <icon name="mail" class="h-6 w-6 text-gray-600"></icon>
-                            <span>info@baymobil.com</span>
+                            <span id="mail">info@baymobil.com</span>
+                            <span id="mail-copy-message"
+                                  class="hidden bg-white text-sm text-green-600">
+                                <icon name="copy" class="h-6 w-6 text-green-600"></icon>
+                                Kopyalandı
+                            </span>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <icon name="location" class="h-6 w-6 text-gray-600"></icon>
-                            <span>Ankara</span>
+                            <span>İstanbul</span>
                         </div>
                     </div>
                 </div>
@@ -168,4 +176,25 @@
         mobileDownload.classList.toggle("hidden");
         menuBtn.textContent = mainNav.classList.contains("hidden") ? "☰" : "×";
     });
+
+    function showMessage(id) {
+        const message = document.getElementById(id);
+        message.classList.remove("hidden");
+        setTimeout(() => {
+        message.classList.add("hidden");
+        }, 1500);
+    }
+
+    function copyPhone() {
+        const phone = document.getElementById("phone").innerText.replace(/\s+/g, "");
+        navigator.clipboard.writeText(phone);
+        showMessage("phone-copy-message");
+    }
+    function copyMail() {
+        const mail = document.getElementById("mail").innerText;
+        navigator.clipboard.writeText(mail);
+        showMessage("mail-copy-message");
+    }
+
+
 </script>
