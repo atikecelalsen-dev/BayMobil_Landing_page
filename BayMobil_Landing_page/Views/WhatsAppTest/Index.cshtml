@@ -1,0 +1,93 @@
+﻿
+
+@model BayMobil_Landing_page.Models.WhatsAppTestModel
+
+<div class="bg-gray-100 px-4 py-10 lg:px-10">
+
+    <section class="mx-auto max-w-5xl rounded-3xl bg-white p-6 shadow-lg shadow-slate-900/5 lg:p-10">
+
+        <div class="mb-8 text-left">
+            <div class="kirmizi-baslik">
+                WhatsApp Test
+            </div>
+
+            <h1 class="h1-yazi !text-3xl !lg:text-4xl">
+                WhatsApp mesaj gönderim test ekranı 
+            </h1>
+
+        </div>
+
+        <form asp-controller="WhatsAppTest"
+              asp-action="Index"
+              method="post"
+              class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+
+            <div>
+                <label for="GsmNo" class="mb-2 block text-sm font-bold text-slate-800">
+                    Telefon
+                </label>
+
+                <input name="GsmNo"
+                       id="GsmNo"
+                       placeholder="905551112233"
+                       class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100" />
+            </div>
+
+            <div>
+                <label for="GonderilecekDosyaUrl" class="mb-2 block text-sm font-bold text-slate-800">
+                    Dosya URL
+                </label>
+
+                <input name="GonderilecekDosyaUrl"
+                       id="GonderilecekDosyaUrl"
+                       value="https://www.csgb.gov.tr/Media/v3mdaymk/szl-02-gizlilik-s%C3%B6zle%C5%9Fmesi.pdf"
+                       class="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100" />
+            </div>
+
+            <div class="lg:col-span-2">
+                <label for="Mesaj" class="mb-2 block text-sm font-bold text-slate-800">
+                    Mesaj
+                </label>
+
+                <textarea name="Mesaj"
+                          id="Mesaj"
+                          rows="6"
+                          class="w-full resize-none rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm outline-none transition focus:border-red-500 focus:ring-2 focus:ring-red-100">
+ Merhaba, ben Baykom destek ekibinden yazıyorum. Size nasıl yardımcı olabiliriz?
+
+ Aşağıdaki linkimizi kontrol edebilirsiniz:
+                      </textarea>
+            </div>
+
+            <div class="lg:col-span-2">
+                <button type="submit"
+                        class="rounded-btn-green flex w-full gap-3 lg:w-auto">
+                    Gönder
+                    <icon name="message" class="h-5 w-5 text-white"></icon>
+                </button>
+            </div>
+        </form>
+
+        @if (Model?.Success != null)
+        {
+            <div class="mt-8 rounded-2xl border p-5 text-left shadow-md shadow-slate-900/5
+                @(Model.Success == true
+                     ? "border-green-200 bg-green-50"
+                     : "border-red-200 bg-red-50")">
+
+                <div class="mb-3 flex items-center gap-3 font-bold
+                    @(Model.Success == true ? "text-green-700" : "text-red-700")">
+
+                    <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white">
+                        @(Model.Success == true ? "✓" : "!")
+                    </span>
+
+                    @(Model.Success == true ? "İstek gönderildi" : "Hata oluştu")
+                </div>
+
+                <pre class="max-h-80 overflow-auto whitespace-pre-wrap rounded-xl bg-white p-4 text-sm text-slate-700">@Model.ApiResponse</pre>
+            </div>
+        }
+
+    </section>
+</div>

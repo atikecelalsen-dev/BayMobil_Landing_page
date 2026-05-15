@@ -11,6 +11,10 @@
     @apply inline-flex items-center gap-3 rounded-lg border border-slate-400 bg-white px-7 py-4 text-sm font-bold text-slate-700 transition hover:bg-slate-100;
 }
 
+.rounded-btn-green {
+    @apply items-center justify-center rounded-xl bg-green-600 px-6 py-3 text-sm font-bold !text-white no-underline shadow-sm transition hover:bg-green-700;
+}
+
 .navbar-item {
     @apply text-base text-black no-underline transition hover:text-red-600;
 }

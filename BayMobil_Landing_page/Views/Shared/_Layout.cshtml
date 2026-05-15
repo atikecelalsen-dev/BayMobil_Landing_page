@@ -33,22 +33,42 @@
                  <a asp-controller="Home" asp-action="Index" asp-fragment="siparis-section" class="navbar-item"> Sipariş </a>
 
                 <a asp-controller="Home" asp-action="Iletisim" class="navbar-item"> İletişim </a>
-                <!-- Mobile Download Button -->
-                <div id="mobileDownload"
-                     class="hidden px-6 pb-6 lg:hidden">
-                    <a href="#indir"
-                       class="rounded-btn-red flex w-full">
-                        Hemen İndir
-                    </a>
-                </div>
+                
+                    <div id="mobileWhatsApp"
+                         class="hidden px-6 pb-6 lg:hidden">
+                        <a href="/WhatsAppTest/Index"
+                           class="rounded-btn-green flex w-full">
+                            Whatsapp Destek
+                        </a>
+                    </div>
+
+                    <!-- Mobile Download Button -->
+                    <div id="mobileDownload"
+                         class="hidden px-6 pb-6 lg:hidden">
+                        <a href="#indir"
+                           class="rounded-btn-red flex w-full">
+                            Hemen İndir
+                        </a>
+                    </div>
+                
+                
             </nav>
 
-            <!-- Button -->
-            <a href="#indir" 
-               class="rounded-btn-red hidden lg:inline-flex">
-                Hemen İndir
-            </a>
+            <div> 
+                <!-- Button -->
+                <a href="/WhatsAppTest/Index"
+                   class="rounded-btn-green hidden lg:inline-flex">
+                    Whatsapp Destek
+                </a>
 
+                <!-- Button -->
+                <a href="#indir"
+                   class="rounded-btn-red hidden lg:inline-flex">
+                    Hemen İndir
+                </a>
+
+            </div>
+            
             <!-- Mobile Menu Button -->
             <button id="menuBtn"
                     type="button"
@@ -170,9 +190,11 @@
     const menuBtn = document.getElementById("menuBtn");
     const mainNav = document.getElementById("mainNav");
     const mobileDownload = document.getElementById("mobileDownload");
+    const mobileWhatsApp = document.getElementById("mobileWhatsApp");
 
     menuBtn.addEventListener("click", () => {
         mainNav.classList.toggle("hidden");
+        mobileWhatsApp.classList.toggle("hidden");
         mobileDownload.classList.toggle("hidden");
         menuBtn.textContent = mainNav.classList.contains("hidden") ? "☰" : "×";
     });
